@@ -27,7 +27,7 @@
     height: 170px;
 }
 
-.selecoes>figure>img:hover{
+.selecoes>figure>a>img:hover{
    cursor: pointer;
    box-shadow: rgb(0, 185, 122) 1px 1px 4px 1px;
 }
