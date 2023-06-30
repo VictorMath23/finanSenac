@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanSenac Emprestimos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleemprestimo.css">
+    <script>
+
+
+            function mostrarDiv() {
+      var div = document.getElementById("menus");
+      if (div.style.display === "none") {
+          div.style.display = "block";
+          div.style.height = "114vh";
+          main.classList.add("menu-open");
+      } else {
+          div.style.display = "none";
+      }
+      }
+
+
+      function selecionarMenu(index) {
+                var menuItems = document.querySelectorAll('#menus ul li a');
+                for (var i = 0; i < menuItems.length; i++) {
+                    if (i === index) {
+                        menuItems[i].classList.add('active');
+                    } else {
+                        menuItems[i].classList.remove('active');
+                    }
+                }
+            }
+
+
+
+  </script>
+</head>
+<body>
+  <header>
+    <div id="header">
+        <img src="img/iconh.png" alt="" onclick="mostrarDiv()">
+    </div>
+    <div id="img">
+       <h1>FinanSenac Finanças</h1><img src="img/finance.png" alt="logo">
+    </div>
+</header>
+
+    <main>
+      <nav>
+        <div id="menus" style="display: none;">
+            <ul>
+                <li><a href="index.html" onclick="selecionarMenu(0)">Inicio</a></li>
+                <li><a href="emprestimo.html" class="active" onclick="selecionarMenu(1)">Emprestimos</a></li>
+                <li><a href="cliente.html" onclick="selecionarMenu(2)">Seja nosso cliente</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="containers">
+    <div id="box1">
+      <p>Pessoal $</p>
+    </div>
+    <div id="box2">
+      <p>Consignado $</p>
+    </div>
+    </div>
+
+    <article>
+      <h2>Simule seu emprestimo aqui na FinanSenac:</h2><br>
+      <h3>De quanto você precisa?</h3><br>
+
+      <strong>R$: </strong><br><input type="number" class="underline-input" placeholder="999.99,99" min="500" max="50000"><br>
+      <strong>Qnt de Meses</strong><br>
+      <input type="number" min="12" max="60" class="underline-input">
+      <h2>Valor da parcela:</h2><br>
+      <input type="number" class="underline-input" disabled>
+      <input type="button" value="Simule agora!" class="botao">
+      <a href="cliente.html"><input type="button" value="Seja nosso cliente!" class="botao2"></a>
+    </article>
+    <div id="abrejanela"class="janela"> 
+      <div>
+      <a href="#close" title="close" class="close">X</a>
+      <h1>Perguntas frequentes</h1>
+    
+
+          <p><strong>Empréstimo</strong> é uma transação financeira em que uma pessoa ou entidade empresta dinheiro a outra pessoa ou empresa. O mutuário concorda em devolver o valor emprestado, geralmente com juros, em um prazo acordado.</p>
+          
+          <p><strong>Financiamento</strong> é uma forma de obter recursos financeiros para a compra de bens ou serviços. Geralmente, envolve o pagamento parcelado do valor total, acrescido de juros e outras taxas, ao longo de um período determinado.</p>
+        
+       
+           <p><strong>Antecipação de saldo</strong> é uma opção oferecida por algumas instituições financeiras em que você pode receber adiantado o valor de um saldo a receber futuro. Essa modalidade geralmente envolve o pagamento de taxas e pode ser útil para antecipar o recebimento de valores a que você teria direito somente em um momento posterior.</p>
+          
+        </div>
+      </div>
+      
+        </div>
+      </div>
+      <div class="duvidas">
+        <h3>Duvidas Frequentes</h3>
+        <p><a href="#abrejanela">clique aqui</a></p>
+	</div>
+    </main>
+
+    <footer>
+      <p>Tel: (xx) xxxx-xxxx</p>
+      <p>Instagram: @FinanSenac</p>
+      <p>LinkedIn: FinanSenac</p>
+      <h6>FinanSenac</h6>
+      <h5>2023</h5>
+  </footer>
+</body>
+</html>

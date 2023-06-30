@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanSenac</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleindex.css">
+    <script>
+
+
+        function mostrarDiv() {
+   var div = document.getElementById("menus");
+   if (div.style.display === "none") {
+      div.style.display = "block";
+      div.style.height = "114vh";
+      main.classList.add("menu-open");
+   } else {
+      div.style.display = "none";
+   }
+}
+
+
+function selecionarMenu(index) {
+            var menuItems = document.querySelectorAll('#menus ul li a');
+            for (var i = 0; i < menuItems.length; i++) {
+                if (i === index) {
+                    menuItems[i].classList.add('active');
+                    
+                } else {
+                    menuItems[i].classList.remove('active');
+                    
+                }
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <img src="img/iconh.png" alt="" onclick="mostrarDiv()">
+        </div>
+        <div id="img">
+           <h1>FinanSenac Finanças</h1><img src="img/finance.png" alt="logo">
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <div id="menus" style="display: none;">
+                <ul>
+                    <li><a href="index.html" class="active" onclick="selecionarMenu(0)">Inicio</a></li>
+                    <li><a href="emprestimo.html" onclick="selecionarMenu(1)">Emprestimos</a></li>
+                    <li><a href="cliente.html" onclick="selecionarMenu(2)">Seja nosso cliente</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="slider">
+            <img src="img/duvida.JPG">
+        </div>
+
+        <div class="selecoes">
+            <figure><a href="emprestimo.html"><img src="img/emprestimo.JPG" alt=""></a>
+                <figcaption>Emprestimo facilitado <a href="emprestimo.html">Simule agora!</a></figcaption>
+            </figure>
+            <figure><a href="#"><img src="img/financiamento2.JPG" alt=""></a>
+                <figcaption>Financiamento <a href="#">Financie já!</a></figcaption>
+            </figure> 
+            <figure>
+                <a href="#"><img src="img/antecipa.JPG" alt=""></a>
+                <figcaption>Antecipação de saldo <a href="#">Antecipe aqui!</a></figcaption>
+            </figure>
+            
+            
+        </div>
+       
+    </main>
+
+    <footer>
+        <p>Tel: (xx) xxxx-xxxx</p>
+        <p>Instagram: @FinanSenac</p>
+        <p>LinkedIn: FinanSenac</p>
+        <h6>FinanSenac</h6>
+        <h5>2023</h5>
+    </footer>
+
+</body>
+</html>
